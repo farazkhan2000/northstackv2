@@ -36,8 +36,8 @@ export function ServiceSelector() {
   }
 
   return (
-    <div className="mt-12 sm:mt-14 xl:mt-16">
-      <div className="hidden items-start gap-10 xl:flex 2xl:gap-16">
+    <div className="mt-14 sm:mt-16 xl:mt-20">
+      <div className="hidden items-start gap-12 xl:flex 2xl:gap-16">
         <div role="tablist" aria-label="Northstack services" aria-orientation="vertical" className="flex w-[42%] shrink-0 flex-col border-t border-zinc-200">
           {services.map((service, index) => (
             <button
@@ -51,10 +51,10 @@ export function ServiceSelector() {
               tabIndex={activeIndex === index ? 0 : -1}
               onClick={() => setActiveIndex(index)}
               onKeyDown={(event) => onTabKeyDown(event, index)}
-              className={`flex min-h-[82px] w-full items-center gap-5 border-b border-l-2 border-b-zinc-200 px-5 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#0033ff] ${activeIndex === index ? "border-l-[#0033ff] bg-blue-50/50 text-[#0033ff]" : "border-l-transparent text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950"}`}
+              className={`flex min-h-[76px] w-full items-center gap-5 border-b border-zinc-200 px-2 text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#0033ff] ${activeIndex === index ? "bg-[#f6f6f3] text-zinc-950" : "text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950"}`}
             >
-              <span className="font-[family-name:var(--font-space-mono)] text-xs font-bold">{service.number}</span>
-              <span className="min-w-0 flex-1 text-lg font-semibold tracking-tight 2xl:text-xl">{service.title}</span>
+              <span className={`font-[family-name:var(--font-space-mono)] text-xs font-bold ${activeIndex === index ? "text-[#0033ff]" : ""}`}>{service.number}</span>
+              <span className="min-w-0 flex-1 text-lg font-medium tracking-tight 2xl:text-xl">{service.title}</span>
               <span aria-hidden="true" className={`text-xl transition-transform ${activeIndex === index ? "translate-x-1" : ""}`}>↗</span>
             </button>
           ))}
@@ -78,7 +78,7 @@ export function ServiceSelector() {
                   className={`flex min-h-20 w-full items-center gap-4 py-4 text-left focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#0033ff] ${expanded ? "text-[#0033ff]" : "text-zinc-950"}`}
                 >
                   <span className="font-[family-name:var(--font-space-mono)] text-xs font-bold">{service.number}</span>
-                  <span className="min-w-0 flex-1 text-lg font-semibold tracking-tight sm:text-xl">{service.title}</span>
+                  <span className="min-w-0 flex-1 text-lg font-medium tracking-tight sm:text-xl">{service.title}</span>
                   <span aria-hidden="true" className="font-[family-name:var(--font-space-mono)] text-2xl font-normal">{expanded ? "−" : "+"}</span>
                 </button>
               </h3>
@@ -97,11 +97,11 @@ export function ServiceSelector() {
 
 function ServicePresentation({ service, compact = false }: { service: Service; compact?: boolean }) {
   return (
-    <div className={`flex flex-col ${compact ? "" : "border border-zinc-200"}`}>
+    <div className={`flex flex-col ${compact ? "" : "border-b border-zinc-200"}`}>
       <div className={compact ? "order-2 mt-6" : "order-1"}><ServiceVisual kind={service.visual} /></div>
       <div className={`${compact ? "order-1" : "order-2 px-7 pt-7 2xl:px-9"}`}>
         <p className="font-[family-name:var(--font-space-mono)] text-[10px] font-bold tracking-[0.15em] text-[#0033ff] uppercase">Service / {service.number}</p>
-        <h3 className="mt-3 text-2xl font-semibold leading-tight tracking-[-0.035em] text-zinc-950 sm:text-[1.7rem]">{service.title}</h3>
+        <h3 className="mt-3 text-2xl font-medium leading-tight tracking-[-0.035em] text-zinc-950 sm:text-[1.7rem]">{service.title}</h3>
         <p className="mt-2 text-sm font-medium leading-6 text-zinc-800">{service.shortDescription}</p>
         <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-600">{service.description}</p>
         <ul aria-label="Capabilities" className="mt-5 flex flex-wrap gap-2">

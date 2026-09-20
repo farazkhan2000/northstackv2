@@ -1,29 +1,23 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { NorthstackHeroGraphic } from "@/components/ui/NorthstackHeroGraphic";
+import { HeroFlowArtwork } from "@/components/ui/HeroFlowArtwork";
 import { whyFacts, whyReasons } from "@/data/whyNorthstack";
 
 export function WhyNorthstack() {
   return (
-    <section id="why-northstack" aria-labelledby="why-northstack-heading" className="relative isolate overflow-hidden bg-[#f4f5f7] py-20 text-zinc-950 xl:py-24">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-20 top-0 text-[38rem] font-black leading-none tracking-[-0.15em] text-[#0033ff]/[0.025]">N</div>
-      <svg aria-hidden="true" viewBox="0 0 600 640" fill="none" className="pointer-events-none absolute -bottom-24 -left-28 h-[640px] w-[600px] text-[#0033ff] opacity-[0.035]">
-        <path d="M40 600V80h110l310 360V80h110v520H460L150 240v360H40Z" stroke="currentColor" strokeWidth="18" />
-        <path d="M0 500h270M0 540h310M0 580h350M250 0v180M290 0v220M330 0v260" stroke="currentColor" strokeWidth="3" />
-        <path d="M380 40h140M380 70h180M380 100h160" stroke="currentColor" strokeWidth="2" />
-      </svg>
+    <section id="why-northstack" aria-labelledby="why-northstack-heading" className="border-t border-zinc-200 bg-[#f6f6f3] py-20 text-zinc-950 xl:py-28">
       <Container className="relative">
         <div className="flex flex-col gap-10 xl:flex-row xl:items-stretch xl:gap-10">
           <div className="xl:w-[71%] xl:min-w-0">
-            <h2 id="why-northstack-heading" className="text-[2rem] font-semibold leading-tight tracking-[-0.05em] sm:text-[2.25rem] xl:text-[2.5rem]">Why Northstack</h2>
+            <h2 id="why-northstack-heading" className="text-4xl font-medium leading-tight tracking-[-0.05em] sm:text-5xl">Why Northstack</h2>
             <div className="mt-8 flex flex-wrap gap-3 sm:mt-9">
               {whyReasons.map((reason) => (
-                <article key={reason.number} className="flex w-full flex-col border border-zinc-200 bg-white/75 px-5 py-4 sm:w-[calc(50%-0.375rem)] lg:w-[calc(33.333%-0.5rem)] lg:px-5">
+                <article key={reason.number} className="flex w-full flex-col border border-zinc-200 bg-white px-5 py-5 sm:w-[calc(50%-0.375rem)] lg:w-[calc(33.333%-0.5rem)] lg:px-5">
                   <div className="flex items-center justify-between">
                     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-[#0033ff]"><path d={reason.icon} /></svg>
                     <span className="font-[family-name:var(--font-space-mono)] text-[10px] text-zinc-400">{reason.number}</span>
                   </div>
-                  <h3 className="mt-3 text-[15px] font-semibold tracking-[-0.025em] uppercase">{reason.title}</h3>
+                  <h3 className="mt-4 text-[15px] font-medium tracking-[-0.025em] uppercase">{reason.title}</h3>
                   <p className="mt-1 text-[13px] leading-5 text-zinc-600">{reason.description}</p>
                 </article>
               ))}
@@ -37,9 +31,9 @@ export function WhyNorthstack() {
               ))}
             </div>
           </div>
-          <aside aria-label="Northstack brand statement" className="flex flex-col overflow-hidden bg-[#081d68] text-white sm:mx-auto sm:w-full sm:max-w-[540px] xl:mx-0 xl:w-auto xl:max-w-none xl:min-w-0 xl:flex-1">
-            <div className="flex min-h-[170px] items-center justify-center bg-[#102567] px-6 py-4 sm:min-h-[190px] xl:min-h-[170px]">
-              <div className="w-36 sm:w-40 xl:w-full xl:max-w-44"><NorthstackHeroGraphic /></div>
+          <aside aria-label="Northstack brand statement" className="flex flex-col overflow-hidden bg-[#0033ff] text-white sm:mx-auto sm:w-full sm:max-w-[540px] xl:mx-0 xl:w-auto xl:max-w-none xl:min-w-0 xl:flex-1">
+            <div className="h-[170px] overflow-hidden bg-[#d9dad7] sm:h-[190px] xl:h-[170px]">
+              <HeroFlowArtwork variant="main" />
             </div>
             <div className="flex flex-1 flex-col justify-between gap-6 bg-[#0033ff] p-7 xl:p-7">
               <div>

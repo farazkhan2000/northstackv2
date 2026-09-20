@@ -3,27 +3,26 @@ import { Container } from "@/components/ui/Container";
 
 export function DevelopmentCTA() {
   return (
-    <section aria-label="AI-assisted development" className="bg-white pb-16 xl:pb-20">
+    <section aria-label="AI-assisted development" className="bg-white pb-20 xl:pb-28">
       <Container>
-        <div className="relative isolate overflow-hidden bg-linear-to-r from-[#080b12] via-[#101b37] to-[#0033ff] text-white">
-          <svg aria-hidden="true" viewBox="0 0 1200 120" preserveAspectRatio="none" className="absolute inset-0 h-full w-full opacity-25">
-            <g fill="none" stroke="#a9c6ff" strokeWidth="1"><path d="M0 24h95l35 30h132l30-24h92M0 99h72l46-38h98l28 23h130M25 0v24m105 30v66M1065 0v42l-45 30h-126m306 26h-91l-42-26h-84m167-72v98M960 0l65 72" /><path d="M317 0v30m-99 54v36m738-48v48M1040 42h160" strokeDasharray="5 8" /></g>
-            <g fill="#b5d2ff"><circle cx="130" cy="54" r="3" /><circle cx="118" cy="61" r="2" /><circle cx="1020" cy="72" r="3" /><circle cx="1065" cy="42" r="3" /></g>
-          </svg>
-          <div className="relative flex flex-col gap-5 px-6 py-6 sm:px-9 lg:min-h-[104px] lg:flex-row lg:items-center lg:gap-0 lg:px-8 lg:py-4 xl:px-10">
-            <div className="lg:w-[29%] lg:pr-6">
-              <h2 className="text-lg font-semibold leading-[1.12] tracking-[-0.025em] uppercase">AI-Assisted<br />Development</h2>
-              <p className="mt-1.5 text-xs leading-5 text-white/75">Move from idea to software faster.</p>
+        <div className="border-t-2 border-[#0033ff] bg-[#202124] text-white">
+          <div className="flex flex-col gap-8 px-6 py-8 sm:px-9 sm:py-10 lg:flex-row lg:items-end lg:gap-10 xl:px-12">
+            <div className="lg:w-[42%]">
+              <p className="font-[family-name:var(--font-space-mono)] text-[10px] tracking-[0.16em] text-[#a9bdff] uppercase">Engineering / AI</p>
+              <h2 className="mt-3 text-[clamp(1.75rem,2.8vw,2.75rem)] font-medium leading-[1.05] tracking-[-0.045em] uppercase">AI-Assisted<br />Development</h2>
+              <p className="mt-3 text-sm leading-6 text-zinc-300">Move from idea to software faster.</p>
             </div>
-            <div className="border-t border-white/25 pt-4 lg:w-[22%] lg:border-l lg:border-t-0 lg:py-1 lg:pl-6">
-              <p className="font-[family-name:var(--font-space-mono)] text-[10px] font-bold tracking-[0.12em] uppercase">Smarter delivery</p>
-              <p className="mt-1 text-xs leading-5 text-white/75">AI-supported engineering workflows</p>
+            <div className="flex flex-col gap-5 border-t border-white/25 pt-6 sm:flex-row sm:gap-8 lg:min-w-0 lg:flex-1 lg:border-l lg:border-t-0 lg:pb-1 lg:pl-8 lg:pt-0">
+              <div className="sm:w-1/2">
+                <p className="text-sm font-medium">Smarter delivery</p>
+                <p className="mt-1 text-sm leading-6 text-zinc-400">AI-supported engineering workflows</p>
+              </div>
+              <div className="sm:w-1/2">
+                <p className="text-sm font-medium">End-to-end</p>
+                <p className="mt-1 text-sm leading-6 text-zinc-400">Product thinking to production</p>
+              </div>
             </div>
-            <div className="border-t border-white/25 pt-4 lg:w-[24%] lg:border-l lg:border-t-0 lg:py-1 lg:pl-6">
-              <p className="font-[family-name:var(--font-space-mono)] text-[10px] font-bold tracking-[0.12em] uppercase">End-to-end</p>
-              <p className="mt-1 text-xs leading-5 text-white/75">Product thinking to production</p>
-            </div>
-            <Link href="/contact" className="inline-flex min-h-11 w-fit items-center justify-center gap-5 bg-white px-5 font-[family-name:var(--font-space-mono)] text-xs font-bold text-[#071744] transition-colors hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white lg:ml-auto">Start a Project <span aria-hidden="true">→</span></Link>
+            <Link href="/contact" className="inline-flex min-h-12 w-fit shrink-0 items-center gap-7 bg-white px-5 font-[family-name:var(--font-space-mono)] text-xs font-bold text-[#202124] transition-colors hover:bg-[#dce6ff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Start a Project <span aria-hidden="true">→</span></Link>
           </div>
         </div>
       </Container>

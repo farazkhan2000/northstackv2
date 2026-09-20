@@ -15,10 +15,10 @@ export function SelectedWork() {
   }
 
   return (
-    <section id="selected-work" aria-labelledby="selected-work-heading" className="border-t border-zinc-200 bg-white py-20 text-zinc-950 xl:py-24">
+    <section id="selected-work" aria-labelledby="selected-work-heading" className="border-t border-zinc-200 bg-white py-20 text-zinc-950 xl:py-28">
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <h2 id="selected-work-heading" className="text-4xl font-semibold tracking-[-0.05em] sm:text-5xl">Selected Work</h2>
+          <h2 id="selected-work-heading" className="text-4xl font-medium tracking-[-0.05em] sm:text-5xl">Selected Work</h2>
           <div className="flex items-center gap-2">
             <Link href="/portfolio" className="inline-flex min-h-11 items-center border border-zinc-300 px-4 font-[family-name:var(--font-space-mono)] text-xs font-bold text-zinc-900 transition-colors hover:border-[#0033ff] hover:text-[#0033ff] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0033ff]">View All <span aria-hidden="true" className="ml-4">↗</span></Link>
             <button type="button" onClick={() => move(-1)} aria-label="Previous project" className="flex h-11 w-11 items-center justify-center border border-zinc-300 text-xl transition-colors hover:border-[#0033ff] hover:text-[#0033ff] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0033ff]">←</button>
@@ -26,16 +26,16 @@ export function SelectedWork() {
           </div>
         </div>
 
-        <article aria-labelledby="featured-project-title" className="mt-10 flex flex-col border border-zinc-200 lg:h-[620px] lg:flex-row">
+        <article aria-labelledby="featured-project-title" className="mt-12 flex flex-col border-y border-zinc-200 lg:h-[620px] lg:flex-row">
           <div className="h-[340px] min-w-0 bg-slate-100 sm:h-[440px] lg:h-full lg:w-[38%] lg:shrink-0">
             <ProjectVisual key={project.slug} project={project} />
           </div>
-          <div className="flex min-w-0 flex-1 flex-col bg-[#f5f6f8] px-6 py-8 sm:px-10 lg:px-11 lg:py-10 xl:px-14">
+          <div className="flex min-w-0 flex-1 flex-col bg-[#f6f6f3] px-6 py-8 sm:px-10 lg:border-l lg:border-zinc-200 lg:px-11 lg:py-10 xl:px-14">
             <div className="flex flex-wrap items-start justify-between gap-4">
               <p className="font-[family-name:var(--font-space-mono)] text-[11px] font-bold tracking-[0.14em] text-[#0033ff] uppercase">Project / {project.number}</p>
               <span className="border border-zinc-300 px-2.5 py-1 font-[family-name:var(--font-space-mono)] text-[10px] font-bold tracking-[0.07em] text-zinc-600 uppercase">{project.category}</span>
             </div>
-            <h3 id="featured-project-title" aria-live="polite" className="mt-6 text-[clamp(2.25rem,4vw,3.75rem)] font-semibold leading-[1.05] tracking-[-0.055em]">{project.title}</h3>
+            <h3 id="featured-project-title" aria-live="polite" className="mt-6 text-[clamp(2.25rem,4vw,3.75rem)] font-medium leading-[1.05] tracking-[-0.055em]">{project.title}</h3>
             <p className="mt-4 max-w-[720px] text-sm leading-6 text-zinc-600 sm:text-base sm:leading-7">{project.description}</p>
             <ul aria-label="Project capabilities" className="mt-6 flex flex-wrap gap-2">
               {project.capabilities.map((capability) => <li key={capability} className="border border-zinc-300 px-2.5 py-1.5 font-[family-name:var(--font-space-mono)] text-[10px] text-zinc-700">{capability}</li>)}

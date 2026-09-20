@@ -36,7 +36,6 @@ Homepage photography is temporary editorial imagery. It does not depict Northsta
 
 The temporary homepage showreel and poster are from [Mikhail Nilov / Pexels](https://www.pexels.com/video/men-working-together-in-an-office-7989689/). They show representative software collaboration, not Northstack staff or an official Northstack office. Replace both files with approved company media before production.
 
-The five abstract marks in `src/data/trustedBy.ts` are temporary design placeholders. They do not represent clients or endorsements and must be replaced with verified customer logos before production.
 
 The three abstract marks in `src/data/partners.ts` are also design placeholders. Replace them with verified Northstack partner logos before production.
 
